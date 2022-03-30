@@ -46,7 +46,11 @@ h5{
 }
 body{
     margin-top: 92px;
+    margin-bottom: 92px;
     background-color: #E5E5E5;
+}
+body div{
+    padding-left: 10px;
 }
 .header{
     box-sizing: border-box;
@@ -64,6 +68,7 @@ body{
 }
 .foodBox{
     margin:10px;
+    margin-left: 0px;
     padding: 14px;
     box-sizing: border-box;
     width: 172px;
@@ -91,4 +96,14 @@ body{
     width: 144px;
     height: 87px;
     border-radius:4px;
+}
+.bottomBar{
+    box-sizing: border-box;
+    height: 92px;
+    padding:10px;
+    width: 100%;
+    position: fixed;
+    bottom:92px;
+    left:0;
+    background-color: #ffffff;
 }
