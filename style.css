@@ -38,6 +38,15 @@ h5{
     line-height: 19px;
     color: #000000;
 }
+h6{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+}
 .white{
     color:white;
 }
