@@ -16,12 +16,22 @@ function select(x,y){
     if(y==desserts){
         mainDessert=x;
     }
-
-    for(let i=0;i<y.length;i++){
-        if(x==y[i]){
+    let z="i"+x;
+    for(let j=0;j<y.length;j++){
+        if(x==y[j]){
             document.getElementById(x).style.borderColor="green";
+            document.getElementById(z).style.display="block";
         }else{
-            document.getElementById(y[i]).style.borderColor="white";
+            document.getElementById(y[j]).style.borderColor="white";
+            document.getElementById("i"+y[j]).style.display="none";
         }
+    }
+    order();
+}
+function order(){
+    if(mainPlate!=null && mainDrink!=null && mainDessert!=null ){
+        document.getElementById("orderTxt").style.display="none";
+        document.getElementById("closeOrder").style.display="block";
+        document.getElementById("order").style.backgroundColor="green";
     }
 }
