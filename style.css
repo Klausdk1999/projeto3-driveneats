@@ -79,6 +79,7 @@ body{
     top:0;
     left:0;
     background-color: #CF2B2B;
+    z-index: 1;
 }
 .options{
     display: flex;
