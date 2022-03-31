@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head> 
     <title>DrivenEats</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div class="header">
         <h1 class="white">DrivenEats</h1>
         <h3 class="white">Sua comida em 6 minutos</h3>
@@ -21,7 +22,7 @@
     <div>
         <h2 class="black">Primeiro, seu prato</h2>
         <div class="options">
-            <div class="foodBox">
+            <div id="pizza" class="foodBox" onclick="plate('pizza')">
                 <img src="media/pizza.jpeg" alt="">
                 <div>
                     <h2>Pizza</h2>
@@ -29,7 +30,7 @@
                     <h4>R$ 14,90</h4>
                 </div>
             </div>
-            <div class="foodBox">
+            <div id="frango" class="foodBox" onclick="plate('frango')">
                 <img src="media/pizza.jpeg" alt="">
                 <div>
                     <h2>Pizza</h2>
@@ -37,7 +38,7 @@
                     <h4>R$ 14,90</h4>
                 </div>
             </div>
-            <div class="foodBox">
+            <div id="lanche" class="foodBox" onclick="plate('lanche')">
                 <img src="media/pizza.jpeg" alt="">
                 <div>
                     <h2>Pizza</h2>
@@ -159,5 +160,6 @@
             <h4>Selecione os 3 itens para fechar o pedido</h2>
         </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
