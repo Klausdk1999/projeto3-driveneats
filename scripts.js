@@ -4,6 +4,7 @@ let mainDessert;
 let pPlate;
 let pDrink;
 let pDessert;
+let last;
 const plates=["pizza","frango","lanche","sushi","batata"];
 const platesV=["34.9","24.9","19.9","19.9","14.9"];
 const drinks=["coca","guarana","suco","agua"];
@@ -13,6 +14,24 @@ const dessertsV=["4.9","29.9","7.9"];
 
 //select recebe x=id do produto e y=tipo do produto
 function select(x,y){
+    if(last==x){
+        document.getElementById(x).style.borderColor="white";
+        document.getElementById("i"+x).style.display="none";
+        last=null;
+
+        if(y==plates){
+            mainPlate=null;
+        }
+        if(y==drinks){
+            mainDrink=null;
+        }
+        if(y==desserts){
+            mainDessert=null;
+        }
+        order();
+        return;
+    }
+    last=x;
     if(y==plates){
         mainPlate=String(x);
     }
@@ -49,6 +68,10 @@ function order(){
         document.getElementById("orderTxt").style.display="none";
         document.getElementById("closeOrder").style.display="block";
         document.getElementById("order").style.backgroundColor="green";
+    }else{
+        document.getElementById("orderTxt").style.display="block";
+        document.getElementById("closeOrder").style.display="none";
+        document.getElementById("order").style.backgroundColor="#e5e5e5";
     }
 }
 
