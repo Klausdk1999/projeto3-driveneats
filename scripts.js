@@ -1,12 +1,15 @@
-let mainPlate="";
-let mainDrink="";
-let mainDessert="";
+let mainPlate;
+let mainDrink;
+let mainDessert;
+let pPlate;
+let pDrink;
+let pDessert;
 const plates=["pizza","frango","lanche","sushi","batata"];
-const platesV=['34.9','24.9','19.9','19.9','14.9'];
-const drinks=["coca","guarana","agua","suco"];
-const drinksV=['7.9','4.9','6.9','4.9'];
+const platesV=["34.9","24.9","19.9","19.9","14.9"];
+const drinks=["coca","guarana","suco","agua"];
+const drinksV=["7.9","4.9","6.9","4.9"];
 const desserts=["brigadeiro","pizza-doce","bolo"];
-const dessertsV=['4.9','29.9','7.9'];
+const dessertsV=["4.9","29.9","7.9"];
 
 //select recebe x=id do produto e y=tipo do produto
 function select(x,y){
@@ -24,6 +27,15 @@ function select(x,y){
         if(x==y[j]){
             document.getElementById(x).style.borderColor="green";
             document.getElementById(z).style.display="block";
+            if(y==plates){
+                pPlate=Number(platesV[j]);
+            }
+            if(y==drinks){
+                pDrink=Number(drinksV[j]);
+            }
+            if(y==desserts){
+                pDessert=Number(dessertsV[j]);
+            }
         }else{
             document.getElementById(y[j]).style.borderColor="white";
             document.getElementById("i"+y[j]).style.display="none";
@@ -46,5 +58,8 @@ let t3=encodeURIComponent("\n- Sobremesa: ");
 let t4=encodeURIComponent("\nTotal: ");
 
 function whatsapp(){
+    let total=(pPlate+pDrink+pDessert);
+    total=total.toFixed(2);
+    total=encodeURIComponent(total);
     window.open("https://wa.me/+5547997709595?text="+t1+mainPlate+t2+mainDrink+t3+mainDessert+t4+total);
 }
