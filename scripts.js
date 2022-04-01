@@ -14,24 +14,28 @@ const dessertsV=["4.9","29.9","7.9"];
 
 //select recebe x=id do produto e y=tipo do produto
 function select(x,y){
-    if(last==x){
+    if(y==plates && mainPlate==String(x)){
+        mainPlate=null;
         document.getElementById(x).style.borderColor="white";
         document.getElementById("i"+x).style.display="none";
-        last=null;
-
-        if(y==plates){
-            mainPlate=null;
-        }
-        if(y==drinks){
-            mainDrink=null;
-        }
-        if(y==desserts){
-            mainDessert=null;
-        }
         order();
         return;
     }
-    last=x;
+    if(y==drinks && mainDrink==String(x)){
+        mainDrink=null;
+        document.getElementById(x).style.borderColor="white";
+        document.getElementById("i"+x).style.display="none";
+        order();
+        return;
+    }
+    if(y==desserts && mainDessert==String(x)){
+        mainDessert=null;
+        document.getElementById(x).style.borderColor="white";
+        document.getElementById("i"+x).style.display="none";
+        order();
+        return;
+    }
+
     if(y==plates){
         mainPlate=String(x);
     }
@@ -41,6 +45,7 @@ function select(x,y){
     if(y==desserts){
         mainDessert=String(x);
     }
+    
     let z="i"+x;
     for(let j=0;j<y.length;j++){
         if(x==y[j]){
