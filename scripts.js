@@ -4,7 +4,6 @@ let mainDessert;
 let pPlate;
 let pDrink;
 let pDessert;
-let last;
 const plates=["pizza","frango","lanche","sushi","batata"];
 const platesV=["34.9","24.9","19.9","19.9","14.9"];
 const drinks=["coca","guarana","suco","agua"];
@@ -45,7 +44,7 @@ function select(x,y){
     if(y==desserts){
         mainDessert=String(x);
     }
-    
+
     let z="i"+x;
     for(let j=0;j<y.length;j++){
         if(x==y[j]){
