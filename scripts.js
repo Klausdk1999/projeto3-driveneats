@@ -79,14 +79,21 @@ function order(){
     }
 }
 
-let t1=encodeURIComponent("Olá, gostaria de fazer o pedido:\n- Prato: ");
+let t1=encodeURIComponent();
 let t2=encodeURIComponent("\n- Bebida: ");
 let t3=encodeURIComponent("\n- Sobremesa: ");
 let t4=encodeURIComponent("\nTotal: ");
-
+let t5=encodeURIComponent("\n\nNome: ");
+let t6=encodeURIComponent("\nEndereço: ")
+let rText="Olá, gostaria de fazer o pedido:\n- Prato: "+mainPlate;
 function whatsapp(){
+    let name=prompt("Qual o seu nome?");
+    name=encodeURIComponent(name);
+    let address=prompt("Qual o endereço para entrega?");
+    address=encodeURIComponent(address);
     let total=(pPlate+pDrink+pDessert);
     total=total.toFixed(2);
     total=encodeURIComponent(total);
-    window.open("https://wa.me/+5547997709595?text="+t1+mainPlate+t2+mainDrink+t3+mainDessert+t4+total);
+    let review=confirm(rText);
+    window.open("https://wa.me/+5547997709595?text="+t1+mainPlate+t2+mainDrink+t3+mainDessert+t4+total+t5+name+t6+address);
 }
