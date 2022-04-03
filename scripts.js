@@ -79,13 +79,32 @@ function order(){
     }
 }
 
-let t1=encodeURIComponent();
+let t1=encodeURIComponent("Olá, gostaria de fazer o pedido:\n- Prato: ");
 let t2=encodeURIComponent("\n- Bebida: ");
 let t3=encodeURIComponent("\n- Sobremesa: ");
 let t4=encodeURIComponent("\nTotal: ");
 let t5=encodeURIComponent("\n\nNome: ");
-let t6=encodeURIComponent("\nEndereço: ")
-let rText="Olá, gostaria de fazer o pedido:\n- Prato: "+mainPlate;
+let t6=encodeURIComponent("\nEndereço: ");
+
+let total=(pPlate+pDrink+pDessert);
+total=total.toFixed(2);
+
+function confirmScreen(){
+    let total=(pPlate+pDrink+pDessert);
+    total=total.toFixed(2);
+    document.getElementById("confirmation").style.display="block";
+    document.getElementById("txtConfirmation1").innerHTML=mainPlate;
+    document.getElementById("txtConfirmation2").innerHTML=mainDrink;
+    document.getElementById("txtConfirmation3").innerHTML=mainDessert;
+    document.getElementById("txtConfirmation4").innerHTML="R$ "+total;
+    document.getElementById("txtConfirmation5").innerHTML=pPlate; 
+    document.getElementById("txtConfirmation6").innerHTML=pDrink; 
+    document.getElementById("txtConfirmation7").innerHTML=pDessert; 
+}
+function cancel(){
+    document.getElementById("confirmation").style.display="none";
+}
+
 function whatsapp(){
     let name=prompt("Qual o seu nome?");
     name=encodeURIComponent(name);
@@ -94,6 +113,6 @@ function whatsapp(){
     let total=(pPlate+pDrink+pDessert);
     total=total.toFixed(2);
     total=encodeURIComponent(total);
-    let review=confirm(rText);
+    //confirm();
     window.open("https://wa.me/+5547997709595?text="+t1+mainPlate+t2+mainDrink+t3+mainDessert+t4+total+t5+name+t6+address);
 }

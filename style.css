@@ -47,6 +47,53 @@ h6{
     text-align: center;
     letter-spacing: 0.018em;
 }
+.confirm{
+    z-index:3;
+    position: fixed;
+    left:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.greenBox{
+    padding: 15px;
+    border-radius: 15px;
+    position: fixed;
+    left:6%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    color: white;
+    width: 80%;
+    height: 353px;
+    background-color:#50D074;
+}
+.greenBox h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+}
+.greenBox h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+}
+.whiteConfirm{
+    border-radius: 15px;
+    background-color: white;
+    color:#50D074;
+}
+
 .closeOrder{
     display:none;
 }

@@ -14,7 +14,29 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="confirmation" class="confirm">
+        <div class="greenBox">
+            <h1>Confirme seu pedido</h1>
+            <div class="textBlock">
+                <h2 id="txtConfirmation1">prato </h2>
+                <h2 id="txtConfirmation5">preço</h2>
+            </div>
+            <div class="textBlock">
+                <h2 id="txtConfirmation2">drink </h2>
+                <h2 id="txtConfirmation6">preço</h2>
+            </div>
+            <div class="textBlock">
+                <h2 id="txtConfirmation3">sobremesa </h2>
+                <h2 id="txtConfirmation7">preço</h2>
+            </div>
+            <div class="textBlock">
+                <h2>Total</h2>
+                <h2 id="txtConfirmation4">total</h2>
+            </div>
+            <div class="whiteConfirm" onclick="whatsapp()"><h1>Pode confirmar</h1></div>
+            <div onclick="cancel()"><h1>Cancelar</h1></div>
+        </div>
+    </div>
     <div class="header">
         <h1 class="white">DrivenEats</h1>
         <h3 class="white">Sua comida em 6 minutos</h3>
@@ -171,7 +193,7 @@
     <div class="bottomBar">
         <div id="order">
             <h6 id="orderTxt" onclick="alert('Por favor, selecione um prato, uma bebida e uma sobremesa')" class="white orderTxt">Selecione os 3 itens para fechar o pedido</h6>
-            <h6 id="closeOrder" onclick="whatsapp()" class="white closeOrder">Fechar pedido</h6>
+            <h6 id="closeOrder" onclick="confirmScreen()" class="white closeOrder">Fechar pedido</h6>
         </div>
     </div>
     <script src="scripts.js"></script>
