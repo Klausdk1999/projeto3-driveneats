@@ -49,15 +49,16 @@ h6{
 }
 .confirm{
     z-index:3;
-    position: fixed;
+    position: absolute;
     left:0;
-    right: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     display: none;
     background-color: rgba(255, 255, 255, 0.8);
 }
 .greenBox{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     padding: 15px;
     border-radius: 15px;
     position: fixed;
@@ -89,6 +90,7 @@ h6{
     letter-spacing: 0.018em;
 }
 .whiteConfirm{
+    padding: 5px;
     border-radius: 15px;
     background-color: white;
     color:#50D074;
